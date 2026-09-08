@@ -1,0 +1,25 @@
+@import "../CartaMesa/CartaMesa.css";
+
+.carta__boton {
+  margin-top: 8px;
+  height: 28px;
+  border: 1px solid #111;
+  background: #f2f0e6;
+  color: #111;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.carta__boton:hover {
+  background: #c44a3c;
+  color: #fff;
+}
+
+.carta_elegible {
+  font: inherit;
+  text-align: inherit;
+}
+
+.carta_elegible:hover {
+  background: #fff;
+}

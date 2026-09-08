@@ -1,0 +1,47 @@
+.jugador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 72px;
+}
+
+.jugador_tu {
+  align-self: end;
+}
+
+.jugador__icono {
+  width: 48px;
+  height: 48px;
+  border: 1.5px solid #111;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Play", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1;
+  background: #f2f0e6;
+  color: #111;
+}
+
+.jugador_rival .jugador__icono {
+  background: #111;
+  color: #f2f0e6;
+}
+
+.jugador_tu .jugador__icono {
+  background: #c44a3c;
+  color: #f2f0e6;
+}
+
+.jugador__nombre {
+  margin: 0;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 72px;
+  white-space: nowrap;
+}

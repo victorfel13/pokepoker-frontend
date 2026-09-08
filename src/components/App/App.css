@@ -1,0 +1,11 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #eceae3;
+  font-family: "Play", Helvetica, Arial, sans-serif;
+}
+
+.page__contenido {
+  flex: 1;
+}

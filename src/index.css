@@ -1,0 +1,41 @@
+@import "./vendor/normalize.css";
+
+html,
+body,
+#root,
+.page {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #eceae3;
+  color: #1a1a1a;
+  font-family: "Play", Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Play", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+p,
+a,
+button,
+input,
+span,
+li {
+  font-family: "Play", Helvetica, Arial, sans-serif;
+}
+
+#root {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.mensaje {
+  margin: 24px auto;
+  text-align: center;
+  max-width: 520px;
+  padding: 0 16px;
+}

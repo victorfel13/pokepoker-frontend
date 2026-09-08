@@ -1,0 +1,204 @@
+.main {
+  flex: 1;
+  width: 100%;
+}
+
+.home {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 56px 24px 8px;
+  text-align: center;
+}
+
+.home__linea {
+  margin: 0 0 12px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #c44a3c;
+}
+
+.home__titulo {
+  margin: 0 0 16px;
+  font-size: 64px;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+.home__bajada {
+  margin: 0 auto 28px;
+  max-width: 420px;
+  font-size: 18px;
+  line-height: 1.45;
+  color: #333;
+}
+
+.home__acciones {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.home__boton {
+  height: 48px;
+  padding: 0 24px;
+  border: 1px solid #111;
+  background: #f2f0e6;
+  text-decoration: none;
+  color: #111;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  font: inherit;
+}
+
+.home__boton:hover {
+  background: #fff;
+}
+
+.home__boton_lleno {
+  background: #c44a3c;
+  border-color: #c44a3c;
+  color: #f2f0e6;
+}
+
+.home__boton_lleno:hover {
+  background: #111;
+  border-color: #111;
+  color: #f2f0e6;
+}
+
+.home__mano {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 16px;
+  min-height: 250px;
+}
+
+.home__carta {
+  width: 150px;
+  height: 236px;
+  border-radius: 18px;
+}
+
+.home__carta_tapada {
+  position: relative;
+  box-sizing: border-box;
+  border: 1.5px solid #111;
+  background: #f2f0e6;
+  transform: rotate(-6deg);
+}
+
+.home__carta_arte {
+  object-fit: contain;
+  display: block;
+}
+
+.home__carta_dorada {
+  transform: rotate(2deg);
+  z-index: 1;
+}
+
+.home__carta_pokedex {
+  transform: rotate(7deg);
+}
+
+.home__esquina {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home__p {
+  width: 22px;
+  height: auto;
+  display: block;
+}
+
+.home__pica {
+  width: 16px;
+  height: 20px;
+}
+
+.home__bola {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+}
+
+.home__pasos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px 48px;
+  max-width: 720px;
+  margin: 8px auto 56px;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.home__paso {
+  min-width: 0;
+}
+
+.home__paso-n {
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #c44a3c;
+}
+
+.home__paso-titulo {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+.home__paso-texto {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.45;
+  color: #333;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 720px) {
+  .home {
+    padding: 36px 16px 8px;
+  }
+
+  .home__titulo {
+    font-size: 40px;
+  }
+
+  .home__mano {
+    gap: 8px;
+  }
+
+  .home__carta {
+    width: 110px;
+    height: 172px;
+  }
+
+  .home__bola {
+    width: 58px;
+    height: 58px;
+  }
+
+  .home__pasos {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+    padding: 0 16px;
+  }
+}

@@ -1,0 +1,43 @@
+.popup__caja_buscar {
+  width: 920px;
+  max-width: 94vw;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+.popup__ayuda {
+  margin: -8px 0 16px;
+  color: #4a4a4a;
+  font-size: 14px;
+}
+
+.popup__paginas {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 16px 0 4px;
+}
+
+.popup__pagina {
+  height: 36px;
+  padding: 0 16px;
+  border: 1px solid #111;
+  background: #f2f0e6;
+  cursor: pointer;
+}
+
+.popup__pagina:hover:not(:disabled) {
+  background: #c44a3c;
+  color: #fff;
+}
+
+.popup__pagina:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+@media (max-width: 720px) {
+  .popup__caja_buscar {
+    width: 94vw;
+  }
+}

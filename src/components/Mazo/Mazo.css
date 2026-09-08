@@ -1,0 +1,161 @@
+.mazo {
+  max-width: 720px;
+  margin: 32px auto 0;
+  padding: 0 16px 8px;
+}
+
+.mazo__linea {
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #c44a3c;
+}
+
+.mazo__titulo {
+  margin: 0 0 8px;
+  font-size: 36px;
+}
+
+.mazo__subtitulo {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.mazo__texto {
+  margin: 0 0 20px;
+  max-width: 520px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #4a4a4a;
+}
+
+.mazo__texto a {
+  color: #c44a3c;
+}
+
+.mazo__resumen {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.mazo__dato {
+  padding: 16px 12px;
+  border: 1.5px solid #111;
+  background: #f2f0e6;
+  text-align: center;
+}
+
+.mazo__dato strong {
+  display: block;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.mazo__dato span {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6a6a6a;
+}
+
+.mazo__bloque {
+  margin-top: 36px;
+}
+
+.mazo__vacio {
+  margin: 0;
+  color: #4a4a4a;
+}
+
+.mazo__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.mazo__grid_tienda {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.mazo__disco {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid #111;
+  display: inline-block;
+}
+
+.mazo__oferta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 14px 12px;
+  border: 1px solid #111;
+  background: #f2f0e6;
+}
+
+.mazo__oferta p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.3;
+  color: #4a4a4a;
+}
+
+.mazo__boton {
+  height: 44px;
+  padding: 0 20px;
+  border: 1px solid #111;
+  background: #c44a3c;
+  color: #f2f0e6;
+  font: inherit;
+  cursor: pointer;
+}
+
+.mazo__boton_chico {
+  height: 32px;
+  margin-top: auto;
+  padding: 0 10px;
+  background: #f2f0e6;
+  color: #111;
+  font-size: 13px;
+}
+
+.mazo__boton:hover,
+.mazo__boton_chico:hover:not(:disabled) {
+  background: #111;
+  color: #f2f0e6;
+}
+
+.mazo__boton_chico:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.mazo .lista-cartas {
+  padding: 0 0 24px;
+  align-items: stretch;
+}
+
+.mazo .lista-cartas__grid {
+  max-width: none;
+}
+
+@media (max-width: 720px) {
+  .mazo__grid_tienda,
+  .mazo__grid,
+  .mazo__resumen {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .mazo__resumen {
+    grid-template-columns: 1fr;
+  }
+}

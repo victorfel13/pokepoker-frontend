@@ -1,0 +1,264 @@
+.carta {
+  width: 150px;
+  height: 236px;
+  padding: 10px 10px 12px;
+  border: 1.5px solid #111;
+  border-radius: 18px;
+  background: #f2f0e6;
+  color: #c44a3c;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  font-family: "Play", Helvetica, Arial, sans-serif;
+}
+
+.carta:disabled {
+  cursor: default;
+}
+
+.carta_tapada {
+  align-items: center;
+  justify-content: center;
+}
+
+.carta_cambiando {
+  outline: 2px solid #c44a3c;
+}
+
+.carta_reparte {
+  z-index: 8;
+  animation: carta-reparte 0.52s cubic-bezier(0.2, 0.75, 0.2, 1) both;
+  animation-delay: var(--deal-delay, 0ms);
+}
+
+.carta_voltea {
+  animation: carta-voltea 0.38s ease;
+}
+
+.carta_foco {
+  z-index: 2;
+  overflow: visible;
+  animation: carta-brinca 0.75s ease-in-out 3, carta-foco-pulso 1.6s ease-in-out 2.3s infinite;
+}
+
+@keyframes carta-reparte {
+  0% {
+    transform: translate(var(--deal-x, -240px), var(--deal-y, -40px)) scale(0.56) rotate(-18deg);
+    opacity: 1;
+  }
+
+  72% {
+    transform: translate(0, 8px) scale(1.03) rotate(2deg);
+  }
+
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes carta-voltea {
+  0% {
+    transform: rotateY(90deg) scale(0.96);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes carta-brinca {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  40% {
+    transform: translateY(-16px) scale(1.05);
+  }
+}
+
+@keyframes carta-foco-pulso {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 0 transparent);
+    transform: scale(1);
+  }
+
+  50% {
+    filter: drop-shadow(0 0 14px rgba(196, 74, 60, 0.7));
+    transform: scale(1.04);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carta_reparte,
+  .carta_voltea,
+  .carta_foco {
+    animation: none;
+  }
+}
+
+.carta_dato {
+  justify-content: space-between;
+}
+
+.carta_especial {
+  padding: 0;
+  border: none;
+  background: transparent;
+  overflow: hidden;
+}
+
+.carta__arte {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.carta_vistazo {
+  outline: 2px dashed #c44a3c;
+}
+
+.carta_jugada {
+  outline: 3px solid #c44a3c;
+  transform: translateY(-8px);
+}
+
+.carta_usada {
+  filter: grayscale(1);
+  opacity: 0.72;
+  transform: none;
+}
+
+.carta__esquina {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carta__p {
+  width: 22px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.carta__pica {
+  width: 16px;
+  height: 20px;
+}
+
+.carta__pokebola {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+}
+
+.carta__fila {
+  display: grid;
+  grid-template-columns: 18px 1fr auto;
+  align-items: center;
+  height: 22px;
+  column-gap: 6px;
+}
+
+.carta__icono-caja {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carta__icono {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  display: block;
+}
+
+.carta__tipo {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.carta__poder {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.carta__cuadro {
+  flex: 1;
+  margin: 8px 0;
+  background: #c44a3c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carta__imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.carta__nombre {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.carta__sello {
+  position: absolute;
+  right: 8px;
+  bottom: 36px;
+  padding: 2px 6px;
+  background: #111;
+  color: #f2f0e6;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 480px) {
+  .carta {
+    width: 110px;
+    height: 156px;
+    padding: 6px;
+    border-radius: 12px;
+  }
+
+  .carta__pokebola {
+    width: 58px;
+    height: 58px;
+  }
+
+  .carta__p {
+    width: 16px;
+  }
+
+  .carta__nombre,
+  .carta__tipo {
+    font-size: 10px;
+  }
+
+  .carta__poder {
+    font-size: 13px;
+  }
+}

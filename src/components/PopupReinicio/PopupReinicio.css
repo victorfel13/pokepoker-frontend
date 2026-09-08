@@ -1,0 +1,10 @@
+.popup__caja_caida {
+  width: 420px;
+}
+
+.popup__caja_caida .popup__pista {
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.45;
+  color: #1a1a1a;
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 195.28 308.13">
+  <defs>
+    <style>
+      .d {
+        fill: #65b9cd;
+      }
+
+      .e {
+        font-family: HelveticaNeue-Bold, 'Helvetica Neue';
+        font-size: 25.75px;
+        font-weight: 700;
+      }
+
+      .e, .f, .g {
+        fill: #cb4537;
+      }
+
+      .f {
+        stroke-width: .75px;
+      }
+
+      .f, .h {
+        stroke: #212121;
+        stroke-miterlimit: 10;
+      }
+
+      .h {
+        fill: #efeee5;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="c" data-name="Capa 1">
+    <g>
+      <rect class="h" x="1" y="1" width="193.28" height="306.13" rx="26.12" ry="26.12"/>
+      <text class="e" transform="translate(20.09 40.46)"><tspan x="0" y="0">P</tspan></text>
+      <path class="f" d="M32.13,79.82l-7.88-.15c1.67-2.03,2.86-3.56,2.67-6.03-2.28,1.63-4.62,2.25-6.81,1.14s-3.18-3.54-2.73-6.28c.5-2.98,2.54-5.44,4.62-7.56l6.2-6.33,7.31,7.35c1.76,1.77,3.27,4.17,3.71,6.53.5,2.72-.58,5.2-2.76,6.27-2.35,1.15-4.83.72-6.71-1.43-.29,1.53.06,2.71.79,3.9l1.58,2.6Z"/>
+      <rect class="g" x="51.15" y="94.21" width="98.63" height="147.95" rx="19.95" ry="19.95"/>
+      <rect class="d" x="65.23" y="123.46" width="70.17" height="44.4"/>
+      <rect class="d" x="73.21" y="179.97" width="9.67" height="33.03" rx="3.41" ry="3.41"/>
+      <rect class="d" x="73.21" y="179.97" width="9.67" height="33.03" rx="3.82" ry="3.82" transform="translate(274.53 118.44) rotate(90)"/>
+      <circle class="d" cx="130.08" cy="107.13" r="8.39"/>
+      <rect class="d" x="116.95" y="176.08" width="6.49" height="24.44" rx="2.42" ry="2.42" transform="translate(308.49 68.11) rotate(90)"/>
+      <rect class="d" x="117.04" y="189.56" width="6.49" height="24.44" rx="2.13" ry="2.13" transform="translate(322.07 81.49) rotate(90)"/>
+    </g>
+  </g>
+</svg>

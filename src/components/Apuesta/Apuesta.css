@@ -1,0 +1,51 @@
+.apuesta {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 0 24px 48px;
+  text-align: center;
+}
+
+.apuesta__linea {
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #c44a3c;
+}
+
+.apuesta__titulo {
+  margin: 0 0 12px;
+  font-size: 36px;
+}
+
+.apuesta__texto {
+  margin: 0 auto 28px;
+  max-width: 420px;
+  font-size: 16px;
+  line-height: 1.45;
+  color: #333;
+}
+
+.apuesta__texto a {
+  color: #c44a3c;
+}
+
+.apuesta__estatus {
+  margin: -12px auto 28px;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #c44a3c;
+}
+
+.apuesta__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 620px) {
+  .apuesta__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,23 @@
+.footer {
+  margin-top: 40px;
+  min-height: 52px;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__texto {
+  color: #f2f0e6;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 480px) {
+  .footer__texto {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,481 @@
+.mesa {
+  display: grid;
+  grid-template-columns: 180px auto 240px;
+  justify-content: center;
+  align-items: start;
+  gap: 28px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 24px 24px 48px;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  color: #1a1a1a;
+  min-height: 640px;
+}
+
+.mesa__lado {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  width: 180px;
+  padding-top: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.mesa__batalla {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0 24px;
+  overflow: visible;
+  position: relative;
+  z-index: 2;
+}
+
+.mesa__vuelo {
+  perspective: 700px;
+}
+
+.mesa__vuelo_espera .carta {
+  opacity: 0;
+}
+
+.mesa__linea {
+  display: grid;
+  grid-template-columns: 72px auto 72px;
+  align-items: center;
+  gap: 12px;
+}
+
+.mesa__linea-hueco {
+  width: 72px;
+  height: 1px;
+}
+
+.mesa__etiqueta {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6a6a6a;
+}
+
+.mesa__turno {
+  margin: 0;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6a6a6a;
+}
+
+.mesa__fichas {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.mesa__ficha {
+  width: 72px;
+  padding: 8px 6px;
+  border: 1.5px solid #111;
+  background: #f2f0e6;
+  text-align: center;
+}
+
+.mesa__ficha span {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6a6a6a;
+}
+
+.mesa__ficha strong {
+  display: block;
+  margin-top: 2px;
+  font-family: "Play", Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.mesa__placa {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1.5px solid #111;
+  background: #f2f0e6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mesa__placa_ok {
+  background: #c44a3c;
+  color: #f2f0e6;
+}
+
+.mesa__placa_no {
+  background: #111;
+  color: #f2f0e6;
+}
+
+.mesa__placa-titulo {
+  margin: 0;
+  font-family: "Play", Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  line-height: 1.15;
+}
+
+.mesa__placa-sub {
+  margin: 6px 0 0;
+  font-size: 13px;
+  line-height: 1.3;
+  opacity: 0.85;
+}
+
+.mesa__fila {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  min-height: 236px;
+  overflow: visible;
+}
+
+.mesa__resultado {
+  position: fixed;
+  inset: 0;
+  z-index: 24;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(17, 17, 17, 0.28);
+  pointer-events: auto;
+}
+
+.mesa__resultado-caja {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: min(420px, 88vw);
+  max-width: 640px;
+  padding: 28px 36px 32px;
+  border: 1.5px solid #111;
+  animation: mesa-resultado-entra 0.32s ease;
+}
+
+.mesa__resultado_fin .mesa__resultado-caja {
+  min-width: min(560px, 90vw);
+  max-width: 760px;
+  padding: 44px 48px 40px;
+}
+
+.mesa__resultado-caja_ok {
+  background: #c44a3c;
+  color: #f2f0e6;
+}
+
+.mesa__resultado-caja_no {
+  background: #111;
+  color: #f2f0e6;
+}
+
+.mesa__resultado-caja_empate {
+  background: #f2f0e6;
+  color: #111;
+}
+
+.mesa__resultado-titulo {
+  margin: 0;
+  font-family: "Play", Helvetica, Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.mesa__resultado_fin .mesa__resultado-titulo {
+  font-size: 56px;
+}
+
+.mesa__resultado-sub {
+  margin: 10px 0 0;
+  font-size: 16px;
+  line-height: 1.35;
+  opacity: 0.88;
+}
+
+.mesa__resultado_fin .mesa__resultado-sub {
+  font-size: 20px;
+}
+
+.mesa__resultado-boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  margin-top: 22px;
+  padding: 0 22px;
+  border: 1.5px solid currentColor;
+  background: #f2f0e6;
+  color: #111;
+  font: inherit;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.mesa__resultado-caja_empate .mesa__resultado-boton {
+  background: #c44a3c;
+  border-color: #111;
+  color: #f2f0e6;
+}
+
+.mesa__resultado-boton:hover:not(:disabled) {
+  background: #eceae3;
+}
+
+.mesa__resultado-caja_empate .mesa__resultado-boton:hover:not(:disabled) {
+  background: #a83c31;
+}
+
+.mesa__resultado-boton:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+@keyframes mesa-resultado-entra {
+  from {
+    transform: translateY(12px) scale(0.96);
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.mesa__versus {
+  width: 72px;
+  height: 2px;
+  margin: 28px 0;
+  background: #111;
+  opacity: 0.2;
+}
+
+.mesa__pista {
+  margin: 0;
+  color: #6a6a6a;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.mesa__boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 18px;
+  border: 1px solid #111;
+  background: #f2f0e6;
+  color: #111;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.mesa__boton_fijo {
+  margin-top: 4px;
+}
+
+.mesa__boton:hover:not(:disabled) {
+  background: #c44a3c;
+  color: #fff;
+}
+
+.mesa__boton:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.mesa__log {
+  width: 100%;
+  max-height: 220px;
+  overflow: auto;
+  padding: 14px 14px 16px;
+  box-sizing: border-box;
+  border: 1.5px solid #111;
+  background: #f2f0e6;
+}
+
+.mesa__derecha {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 12px;
+}
+
+.mesa__pozo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.mesa__pozo .objeto {
+  min-height: 88px;
+}
+
+.mesa__carta-caja {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.mesa__comprar {
+  height: 28px;
+  padding: 0 8px;
+  border: 1px solid #111;
+  background: #f2f0e6;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.mesa__comprar:hover:not(:disabled) {
+  background: #c44a3c;
+  color: #fff;
+}
+
+.mesa__comprar:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.mesa__mazo {
+  padding: 14px;
+  border: 1.5px solid #111;
+  background: #f2f0e6;
+  box-sizing: border-box;
+}
+
+.mesa__mazo-saldo {
+  margin: 4px 0 10px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #c44a3c;
+}
+
+.mesa__mazo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.mesa__mazo-grid .objeto {
+  min-height: 96px;
+  padding: 8px 6px;
+}
+
+.mesa__mazo-grid .objeto__imagen {
+  width: 40px;
+  height: 40px;
+}
+
+.mesa__log-nombre {
+  margin: 0;
+  font-family: "Play", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.mesa__log-tu {
+  margin: 2px 0 14px;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #c44a3c;
+}
+
+.mesa__log-vacio,
+.mesa__log-item {
+  margin: 0 0 12px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #1a1a1a;
+}
+
+.mesa__log-item p {
+  margin: 0;
+}
+
+.mesa__log-aviso {
+  color: #c44a3c;
+}
+
+.main > .mesa__boton {
+  display: flex;
+  margin: 48px auto;
+}
+
+@media (max-width: 900px) {
+  .mesa {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    padding: 16px 12px 32px;
+  }
+
+  .mesa__lado,
+  .mesa__derecha,
+  .mesa__log {
+    width: auto;
+    max-height: none;
+  }
+
+  .mesa__linea {
+    grid-template-columns: 56px auto 56px;
+    gap: 8px;
+  }
+
+  .mesa__pista {
+    max-width: none;
+  }
+
+  .mesa__batalla {
+    padding: 0;
+  }
+
+  .mesa__fila {
+    gap: 8px;
+    min-height: 156px;
+  }
+
+  .mesa__versus {
+    margin: 16px 0;
+  }
+
+  .mesa__resultado-titulo {
+    font-size: 28px;
+  }
+
+  .mesa__resultado_fin .mesa__resultado-titulo {
+    font-size: 36px;
+  }
+
+  .mesa__resultado-caja,
+  .mesa__resultado_fin .mesa__resultado-caja {
+    padding: 24px 20px 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mesa__resultado-caja {
+    animation: none;
+  }
+}

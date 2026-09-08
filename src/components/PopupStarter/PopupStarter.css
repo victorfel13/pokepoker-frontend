@@ -1,0 +1,14 @@
+.popup__caja_starter {
+  width: 640px;
+  max-width: 94%;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+.starter__grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 8px;
+}

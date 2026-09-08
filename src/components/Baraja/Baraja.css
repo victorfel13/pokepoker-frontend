@@ -1,0 +1,133 @@
+.baraja {
+  width: 118px;
+  height: 128px;
+  position: relative;
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.baraja:disabled {
+  cursor: default;
+}
+
+.baraja_activa,
+.baraja_foco {
+  outline: 2px solid #c44a3c;
+  outline-offset: 6px;
+}
+
+.baraja_barajeando .baraja__carta:nth-child(1) {
+  animation: baraja-shuffle 0.32s ease-in-out infinite;
+}
+
+.baraja_barajeando .baraja__carta:nth-child(2) {
+  animation: baraja-shuffle 0.32s ease-in-out 0.07s infinite;
+}
+
+.baraja_barajeando .baraja__carta:nth-child(3) {
+  animation: baraja-shuffle 0.32s ease-in-out 0.14s infinite;
+}
+
+.baraja_barajeando .baraja__carta:nth-child(4) {
+  animation: baraja-shuffle 0.32s ease-in-out 0.21s infinite;
+}
+
+.baraja_foco .baraja__carta:nth-child(4) {
+  animation: baraja-brinca 0.7s ease-in-out infinite;
+}
+
+@keyframes baraja-shuffle {
+  0%,
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
+
+  35% {
+    transform: rotate(-12deg) translateY(-14px);
+  }
+
+  70% {
+    transform: rotate(10deg) translateY(-6px);
+  }
+}
+
+@keyframes baraja-brinca {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .baraja_barajeando .baraja__carta,
+  .baraja_foco .baraja__carta:nth-child(4) {
+    animation: none;
+  }
+}
+
+.baraja__carta {
+  position: absolute;
+  top: 8px;
+  width: 84px;
+  height: 118px;
+  background: #f2f0e6;
+  border: 1.5px solid #111;
+  border-radius: 12px;
+}
+
+.baraja__carta:nth-child(1) {
+  left: 0;
+  z-index: 1;
+}
+
+.baraja__carta:nth-child(2) {
+  left: 8px;
+  z-index: 2;
+}
+
+.baraja__carta:nth-child(3) {
+  left: 16px;
+  z-index: 3;
+}
+
+.baraja__carta:nth-child(4) {
+  left: 24px;
+  z-index: 4;
+}
+
+.baraja__esquina {
+  position: absolute;
+  top: 6px;
+  left: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.baraja__p {
+  width: 14px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.baraja__pica {
+  width: 10px;
+  height: 12px;
+}
+
+.baraja__pokebola {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  object-fit: contain;
+}

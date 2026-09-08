@@ -1,0 +1,83 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px 12px;
+  border-bottom: 1px solid #111;
+}
+
+.header__marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+.header__logo {
+  width: 36px;
+  height: 36px;
+}
+
+.header__titulo {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 0.02em;
+}
+
+.header__acciones {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__estatus {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #c44a3c;
+}
+
+.header__link {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.header__link:hover {
+  color: #c44a3c;
+}
+
+.header__boton {
+  min-width: 140px;
+  height: 40px;
+  padding: 0 16px;
+  border: 1px solid #111;
+  background: #f2f0e6;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.header__boton:hover {
+  background: #c44a3c;
+  color: #fff;
+}
+
+.header__hueco {
+  min-width: 140px;
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-wrap: wrap;
+    padding: 16px 12px 12px;
+  }
+
+  .header__titulo {
+    font-size: 22px;
+  }
+}

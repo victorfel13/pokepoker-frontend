@@ -1,0 +1,29 @@
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav__link {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.nav__link:hover {
+  color: #c44a3c;
+}
+
+.nav__link_activa {
+  font-weight: 700;
+  border-bottom: 1px solid #111;
+}
+
+@media (max-width: 480px) {
+  .nav {
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+  }
+}
